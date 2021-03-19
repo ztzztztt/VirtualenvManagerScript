@@ -61,7 +61,7 @@ elif [ $# -eq 2 ]; then
     elif [ $1 == "a" ] || [ $1 == "add" ]; then
         if [ $(contains "${ENV_LIST[@]}" "$2") == "n" ]; then
             virtualenv $ENV_PATH/$2
-            lsEnvs
+            refreshEnvs
         else
             echo "$2 Envs is exists"
         fi
